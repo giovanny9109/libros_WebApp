@@ -1,0 +1,22 @@
+<form>
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" [(ngModel)]="nombre" name="nombre">
+    </div>
+    <div class="mb-3">
+        <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+        <input type="date" class="form-control" [(ngModel)]="fechaNacimiento" name="fechaNacimiento">
+    </div>
+    <div class="mb-3">
+        <label for="ciudad" class="form-label">Ciudad</label>
+        <input type="text" class="form-control" [(ngModel)]="ciudad" name="ciudad">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" [(ngModel)]="email" name="email">
+    </div>
+    
+    <button (click)="addautor()" class="btn btn-primary">
+        Save
+    </button>
+</form>

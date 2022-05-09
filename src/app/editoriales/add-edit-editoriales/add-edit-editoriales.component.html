@@ -1,0 +1,26 @@
+<form>
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" [(ngModel)]="nombre" name="nombre">
+    </div>
+    <div class="mb-3">
+        <label for="direccion" class="form-label">Direccion</label>
+        <input type="text" class="form-control" [(ngModel)]="direccion" name="direccion">
+    </div>
+    <div class="mb-3">
+        <label for="telefono" class="form-label">Telefono</label>
+        <input type="text" class="form-control" [(ngModel)]="telefono" name="telefono">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" [(ngModel)]="email" name="email">
+    </div>
+    <div class="mb-3">
+        <label for="libros_registrados" class="form-label">Maximo de Libros Registrados</label>
+        <input type="number" class="form-control" [(ngModel)]="libros_registrados" name="libros_registrados">
+    </div>
+    
+    <button (click)="addeditorial()" class="btn btn-primary">
+        Save
+    </button>
+</form>

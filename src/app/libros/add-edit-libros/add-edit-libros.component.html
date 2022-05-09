@@ -1,0 +1,55 @@
+<form>
+    <div class="mb-3">
+        <label for="titulo" class="form-label">Titulo</label>
+        <input type="text" class="form-control" [(ngModel)]="titulo" name="titulo">
+    </div>
+    <div class="mb-3">
+        <label for="anio" class="form-label">Año</label>
+        <input type="number" class="form-control" [(ngModel)]="anio" name="anio">
+    </div>
+    <div class="mb-3">
+        <label for="genero" class="form-label">Genero</label>
+        <input type="text" class="form-control" [(ngModel)]="genero" name="genero">
+    </div>
+    <div class="mb-3">
+        <label for="paginas" class="form-label">Paginas</label>
+        <input type="number" class="form-control" [(ngModel)]="paginas" name="paginas">
+    </div>
+    <div class="mb-3">
+        <label for="autorId" class="form-label">Autor</label>
+        <!-- <input type="text" class="form-control" name="autorId" [(ngModel)]="autorId" 
+        *ngIf="libros.id!=0" disabled> -->
+        <!-- <select class="form-control" name="autorId" id="autorId" [(ngModel)]
+        ="autorId" *ngIf="libros.id==0">
+            <option *ngFor="let autor of autoresList$|async" [value]="autor.id">{{autor.nombre}}</option>
+        </select> -->
+        <select class="form-control" name="autorId" id="autorId" [(ngModel)]
+        ="autorId">
+            <option *ngFor="let autor of autoresList$|async" [value]="autor.id">{{autor.nombre}}</option>
+        </select>
+        
+    </div>
+    <div class="mb-3">
+        <label for="editorialId" class="form-label">Editorial</label>
+        <!-- <input type="text" class="form-control" name="editorialId" [(ngModel)]="editorialId" 
+        *ngIf="libros.id!=0" disabled> -->
+        <!-- <select class="form-control" name="editorialId" id="editorialId" [(ngModel)]
+        ="editorialId" *ngIf="libros.id==0">
+            <option *ngFor="let editorial of editorialesList$|async" [value]="editorial.id">{{editorial.nombre}}</option>
+        </select> -->
+        <select class="form-control" name="editorialId" id="editorialId" [(ngModel)]
+        ="editorialId">
+            <option *ngFor="let editorial of editorialesList$|async" [value]="editorial.id">{{editorial.nombre}}</option>
+        </select>
+    </div>
+    <button (click)="addlibro()" *ngIf="libros.id==0" class="btn btn-primary">
+        Add
+    </button>
+    <button (click)="updatelibro()" *ngIf="libros.id!=0" class="btn btn-primary">
+        update
+    </button>
+</form>
+
+<!-- <div class="alert alert-success" role="alert" id="add-success-alert">
+    {{maximoLibrosSuperado}}
+  </div> -->
